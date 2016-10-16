@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Job Application{% endblock %}
+
+{% block content %}
+	
+	<h1>Job Application</h1>
+	<p>
+		Please enter your information to apply.
+	</p>
+	<form action="/application" method="POST">
+		<label for="firstname">First Name: </label> <input type="text" id="firstname" name="firstname"><br>
+		<label for="lastname">Last Name: </label><input type="text" id="lastname" name="lastname"><br>
+		<br>
+		<legend>Which job are you applying for?</legend>
+		<input type="radio" name="job" value="Software Engineer" id="software-engineer"><label for="software-engineer">Software Engineer</label><br>
+		<input type="radio" name="job" value="QA Engineer" id="qa-engineer"><label for="qa-engineer">QA Engineer</label><br>
+		<input type="radio" name="job" value="Product Manager" id="product-manager"><label for="product-manager">Product Manager</label><br><br>
+		<input type="submit" name="submit" value="Submit Application">
+	</form>
+{% endblock %}
